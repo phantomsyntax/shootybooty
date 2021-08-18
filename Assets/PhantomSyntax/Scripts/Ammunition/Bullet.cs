@@ -16,19 +16,19 @@ public class Bullet : MonoBehaviour, IActorProperties
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private SOActorObject bulletActorObject;
 
-    private void Awake()
-    {
-        PopulateStats(bulletActorObject);
-    }
-
     void Start()
     {
         NullChecks();
+
+        PopulateStats(bulletActorObject);
     }
 
     private void NullChecks()
     {
-
+        if (!bulletActorObject)
+        {
+            Debug.LogWarning("[Bullet] - No bulletActorObject is loaded!");
+        }
     }
 
     public void PopulateStats(SOActorObject actorObject)
@@ -46,6 +46,8 @@ public class Bullet : MonoBehaviour, IActorProperties
         {
             Die();
         }
+
+        Movement();
     }
 
     private void Movement()
@@ -76,6 +78,7 @@ public class Bullet : MonoBehaviour, IActorProperties
         }
     }
 
+    // This doesn't work..
     private void OnBecameInvisible()
     {
         Destroy(gameObject);

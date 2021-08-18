@@ -101,7 +101,7 @@ public class Player : MonoBehaviour, IActorProperties
     {
         if (Input.GetButtonDown("Fire1"))  
         {
-            print("fire");
+            GameObject bullet = Instantiate(playerBullet, transform.position, Quaternion.Euler(new Vector3(0.0f, 0.0f, 0.0f)));
         }
     }
 
@@ -118,6 +118,7 @@ public class Player : MonoBehaviour, IActorProperties
     public void Die()
     {
         Destroy(gameObject);
+        print("Player has died");
     }
 
     private void OnTriggerEnter(Collider other)
