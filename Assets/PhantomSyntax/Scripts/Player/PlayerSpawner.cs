@@ -35,6 +35,7 @@ public class PlayerSpawner : MonoBehaviour
     private void Spawn(Vector3 position, Quaternion rotation)
     {
         playerShipPrefab = Instantiate(playerActorObject.actorPrefab, position, rotation, transform);
+        playerShipPrefab.GetComponent<IActorProperties>().PopulateStats(playerActorObject);
     }
 
     private void Initialize(string name, Vector3 scale)
