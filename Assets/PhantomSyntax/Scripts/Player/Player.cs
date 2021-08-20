@@ -117,6 +117,7 @@ public class Player : MonoBehaviour, IActorProperties
 
     public void Die()
     {
+        GameManager.Instance.PlayerDestroyed();
         Destroy(gameObject);
         print("Player has died");
     }

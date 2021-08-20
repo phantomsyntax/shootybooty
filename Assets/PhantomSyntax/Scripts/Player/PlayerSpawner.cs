@@ -6,7 +6,7 @@ public class PlayerSpawner : MonoBehaviour
     [SerializeField] private SOActorObject playerActorObject;
     [SerializeField] private GameObject playerShipPrefab;
     [SerializeField] private Vector3 playerSpawnPosition = Vector3.zero;
-    [SerializeField] private Quaternion playerSpawnRotation = Quaternion.Euler(0, 180, 0);
+    [SerializeField] private Quaternion playerSpawnRotation = Quaternion.Euler(0, 0, 0);
 
     [Header("Player Initialize Settings")]
     [SerializeField] private string playerObjectName = "Player";
