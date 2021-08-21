@@ -28,6 +28,7 @@ public class SceneLoader : MonoBehaviour
 
     public void GameOver()
     {
+        GameManager.Instance.GetComponent<ScoreManager>().ResetScore();
         SceneManager.LoadScene((int) SceneList.GameOver);
     }
 }

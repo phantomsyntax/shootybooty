@@ -14,6 +14,7 @@ public class SOActorObject : ScriptableObject
     [Header("Attack Settings")]
     public AttackType attackType = AttackType.enemyWave;
     public int actorHitPower = 1;
+    public int actorPointValue = 200;
 
     [Header("Actor Description")]
     public string actorName = "Actor Name";

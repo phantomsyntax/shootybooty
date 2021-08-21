@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IActorProperties
     [SerializeField] private int enemyHitPower;
     [SerializeField] private int enemyFireSpeed;
     [SerializeField] private int enemyTravelSpeed;
+    [SerializeField] private int enemyPointValue;
 
     [Header("Enemy Wave Settings")]
     [SerializeField] private float verticalSpeed = 1.0f;
@@ -31,6 +32,7 @@ public class Enemy : MonoBehaviour, IActorProperties
         enemyHealth = actorObject.actorHealth;
         enemyHitPower = actorObject.actorHitPower;
         enemyTravelSpeed = actorObject.actorSpeed;
+        enemyPointValue = actorObject.actorPointValue;
     }
 
     private void Update()
@@ -64,6 +66,7 @@ public class Enemy : MonoBehaviour, IActorProperties
 
     public void Die()
     {
+        GameManager.Instance.GetComponent<ScoreManager>().UpdateScore(enemyPointValue);
         Destroy(gameObject);
         print("Enemy has died");
     }
