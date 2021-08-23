@@ -21,6 +21,7 @@ public class Bullet : MonoBehaviour, IActorProperties
         NullChecks();
 
         PopulateStats(bulletActorObject);
+        Destroy(gameObject, 1.5f);
     }
 
     private void NullChecks()

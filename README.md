@@ -1,6 +1,6 @@
-#Shooty Booty
+# Shooty Booty
 
-###Side scrolling space shooter
+### Side scrolling space shooter
 
 ---
 - Use WASD to move
