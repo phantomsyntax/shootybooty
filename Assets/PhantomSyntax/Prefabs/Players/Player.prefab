@@ -161,8 +161,8 @@ MonoBehaviour:
   playerSpeed: 0
   playerHealth: 0
   playerHitPower: 0
-  playerShipPrefab: {fileID: 0}
-  playerBullet: {fileID: 0}
+  playerShipPrefab: {fileID: 7047811922140507355}
+  playerBullet: {fileID: 6877033801752636395, guid: 6e33fdcad2bebb541b3a993bd64132e5, type: 3}
   boundaryHeight: 0
   boundaryWidth: 0
 --- !u!1001 &5602213054567374162

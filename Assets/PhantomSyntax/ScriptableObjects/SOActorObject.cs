@@ -12,19 +12,19 @@ public class SOActorObject : ScriptableObject
     }
 
     [Header("Attack Settings")]
-    public AttackType attackType = AttackType.enemyWave;
-    public int actorHitPower = 1;
-    public int actorPointValue = 200;
+                     public AttackType attackType = AttackType.enemyWave;
+                     public int actorHitPower = 1;
+                     public int actorPointValue = 200;
 
     [Header("Actor Description")]
-    public string actorName = "Actor Name";
-    public string actorDescription = "Actor Description";
+                     public string actorName = "Actor Name";
+                     public string actorDescription = "Actor Description";
 
     [Header("Actor Stats")]
-    public int actorHealth = 100;
-    public int actorSpeed = 1;
+                     public int actorHealth = 100;
+                     public int actorSpeed = 1;
 
     [Header("Actor Prefabs")]
-    public GameObject actorPrefab;
-    public GameObject actorBulletPrefab;
+                     public GameObject actorPrefab;
+                     public GameObject actorBulletPrefab;
 }
